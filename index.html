@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EsToDoList</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#20252C] text-[#E8EDF3] min-h-screen">
+
+    <!-- Cabeçalho -->
+    <header class="bg-[#282F38] text-[#E8EDF3]">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+
+            <h1 class="text-xl md:text-3xl font-bold">
+                EsToDo<span class="text-[#829DBB]">List</span>
+            </h1>
+
+            <span class="hidden sm:inline text-sm">
+                Organize sua rotina escolar
+            </span>
+
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-6 grid grid-cols-1 gap-6 xl:grid-cols-3">
+
+        <!-- Criar, pesquisar e filtrar tarefas -->
+        <section class="bg-[#282F38] rounded-xl shadow-lg p-4 space-y-4
+           xl:col-span-1
+           xl:sticky xl:top-6 xl:self-start">
+
+            <!-- Formulário -->
+            <form class="flex flex-col gap-2 md:flex-row xl:flex-col">
+
+                <!-- Campo da tarefa -->
+                <input type="text" placeholder="Nova tarefa"
+                    class="w-full min-w-0 md:flex-1 bg-[#20252C] text-[#E8EDF3] placeholder:text-[#AAB6C4] border border-[#3B4653] rounded-md px-2 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#829DBB]">
+
+                <!-- Calendário -->
+                <input type="date"
+                    class="w-full md:w-[140px] xl:w-full shrink-0 bg-[#20252C] text-[#E8EDF3] border border-[#3B4653] rounded-md px-2 py-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#829DBB]">
+
+                <!-- Botão Adicionar -->
+                <button type="submit" class="bg-[#829DBB] text-[#20252C]
+         hover:bg-[#607D9B]
+         hover:ring-2 hover:ring-[#91AAC5]
+         transition-all duration-300 ease-in-out
+         rounded-lg px-4 py-3">
+                    Adicionar
+                </button>
+
+            </form>
+
+            <!-- Pesquisa -->
+            <input type="search" placeholder="Pesquisar tarefa..."
+                class="w-full bg-[#20252C] text-[#E8EDF3] placeholder:text-[#AAB6C4] border border-[#3B4653] rounded-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-[#829DBB]">
+
+            <!-- Filtros -->
+            <div class="flex gap-2 overflow-x-auto xl:flex-wrap xl:overflow-visible">
+
+                <button type="button"
+                    class="px-4 py-3 rounded-full bg-[#829DBB] text-[#20252C] font-semibold whitespace-nowrap shrink-0">
+                    Todas
+                </button>
+
+                <button type="button"
+                    class="px-4 py-3 rounded-full bg-[#323B46] text-[#E8EDF3] hover:bg-[#414D5B] whitespace-nowrap shrink-0 transition-colors">
+                    Pendentes
+                </button>
+
+                <button type="button"
+                    class="px-4 py-3 rounded-full bg-[#323B46] text-[#E8EDF3] hover:bg-[#414D5B] whitespace-nowrap shrink-0 transition-colors">
+                    Concluídas
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Lista de tarefas -->
+        <section class="min-w-0 xl:col-span-2">
+
+            <ul class="space-y-3">
+
+                <!-- Tarefa 1 -->
+                <li
+                    class="bg-[#323B46] rounded-xl shadow-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <label class="flex items-start gap-3 sm:flex-1 min-w-0">
+
+                        <input type="checkbox" class="mt-1 w-5 h-5 shrink-0 accent-[#829DBB]">
+
+                        <span class="min-w-0">
+                            <span class="block font-medium text-[#E8EDF3]">
+                                Trabalho de História
+                            </span>
+
+                            <span class="text-sm text-[#AAB6C4]">
+                                20/10/2026
+                            </span>
+                        </span>
+
+                    </label>
+
+                    <div class="flex gap-2">
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#829DBB] text-[#20252C] font-semibold hover:bg-[#91AAC5] transition-colors">
+                            Editar
+                        </button>
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#77575B] text-[#E8EDF3] hover:bg-[#89676B] transition-colors">
+                            Excluir
+                        </button>
+
+                    </div>
+
+                </li>
+
+                <!-- Tarefa 1 -->
+                <li
+                    class="bg-[#323B46] rounded-xl shadow-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <label class="flex items-start gap-3 sm:flex-1 min-w-0">
+
+                        <input type="checkbox" class="mt-1 w-5 h-5 shrink-0 accent-[#829DBB]">
+
+                        <span class="min-w-0">
+                            <span class="block font-medium text-[#E8EDF3]">
+                                Trabalho de História
+                            </span>
+
+                            <span class="text-sm text-[#AAB6C4]">
+                                20/10/2026
+                            </span>
+                        </span>
+
+                    </label>
+
+                    <div class="flex gap-2">
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#829DBB] text-[#20252C] font-semibold hover:bg-[#91AAC5] transition-colors">
+                            Editar
+                        </button>
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#77575B] text-[#E8EDF3] hover:bg-[#89676B] transition-colors">
+                            Excluir
+                        </button>
+
+                    </div>
+
+                </li>
+
+                <!-- Tarefa 1 -->
+                <li
+                    class="bg-[#323B46] rounded-xl shadow-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <label class="flex items-start gap-3 sm:flex-1 min-w-0">
+
+                        <input type="checkbox" class="mt-1 w-5 h-5 shrink-0 accent-[#829DBB]">
+
+                        <span class="min-w-0">
+                            <span class="block font-medium text-[#E8EDF3]">
+                                Trabalho de História
+                            </span>
+
+                            <span class="text-sm text-[#AAB6C4]">
+                                20/10/2026
+                            </span>
+                        </span>
+
+                    </label>
+
+                    <div class="flex gap-2">
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#829DBB] text-[#20252C] font-semibold hover:bg-[#91AAC5] transition-colors">
+                            Editar
+                        </button>
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#77575B] text-[#E8EDF3] hover:bg-[#89676B] transition-colors">
+                            Excluir
+                        </button>
+
+                    </div>
+
+                </li>
+
+                <!-- Tarefa 1 -->
+                <li
+                    class="bg-[#323B46] rounded-xl shadow-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <label class="flex items-start gap-3 sm:flex-1 min-w-0">
+
+                        <input type="checkbox" class="mt-1 w-5 h-5 shrink-0 accent-[#829DBB]">
+
+                        <span class="min-w-0">
+                            <span class="block font-medium text-[#E8EDF3]">
+                                Trabalho de História
+                            </span>
+
+                            <span class="text-sm text-[#AAB6C4]">
+                                20/10/2026
+                            </span>
+                        </span>
+
+                    </label>
+
+                    <div class="flex gap-2">
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#829DBB] text-[#20252C] font-semibold hover:bg-[#91AAC5] transition-colors">
+                            Editar
+                        </button>
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#77575B] text-[#E8EDF3] hover:bg-[#89676B] transition-colors">
+                            Excluir
+                        </button>
+
+                    </div>
+
+                </li>
+
+                <!-- Tarefa 1 -->
+                <li
+                    class="bg-[#323B46] rounded-xl shadow-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <label class="flex items-start gap-3 sm:flex-1 min-w-0">
+
+                        <input type="checkbox" class="mt-1 w-5 h-5 shrink-0 accent-[#829DBB]">
+
+                        <span class="min-w-0">
+                            <span class="block font-medium text-[#E8EDF3]">
+                                Trabalho de História
+                            </span>
+
+                            <span class="text-sm text-[#AAB6C4]">
+                                20/10/2026
+                            </span>
+                        </span>
+
+                    </label>
+
+                    <div class="flex gap-2">
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#829DBB] text-[#20252C] font-semibold hover:bg-[#91AAC5] transition-colors">
+                            Editar
+                        </button>
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#77575B] text-[#E8EDF3] hover:bg-[#89676B] transition-colors">
+                            Excluir
+                        </button>
+
+                    </div>
+
+                </li>
+
+                <!-- Tarefa 1 -->
+                <li
+                    class="bg-[#323B46] rounded-xl shadow-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <label class="flex items-start gap-3 sm:flex-1 min-w-0">
+
+                        <input type="checkbox" class="mt-1 w-5 h-5 shrink-0 accent-[#829DBB]">
+
+                        <span class="min-w-0">
+                            <span class="block font-medium text-[#E8EDF3]">
+                                Trabalho de História
+                            </span>
+
+                            <span class="text-sm text-[#AAB6C4]">
+                                20/10/2026
+                            </span>
+                        </span>
+
+                    </label>
+
+                    <div class="flex gap-2">
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#829DBB] text-[#20252C] font-semibold hover:bg-[#91AAC5] transition-colors">
+                            Editar
+                        </button>
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#77575B] text-[#E8EDF3] hover:bg-[#89676B] transition-colors">
+                            Excluir
+                        </button>
+
+                    </div>
+
+                </li>
+
+                <!-- Tarefa 1 -->
+                <li
+                    class="bg-[#323B46] rounded-xl shadow-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <label class="flex items-start gap-3 sm:flex-1 min-w-0">
+
+                        <input type="checkbox" class="mt-1 w-5 h-5 shrink-0 accent-[#829DBB]">
+
+                        <span class="min-w-0">
+                            <span class="block font-medium text-[#E8EDF3]">
+                                Trabalho de História
+                            </span>
+
+                            <span class="text-sm text-[#AAB6C4]">
+                                20/10/2026
+                            </span>
+                        </span>
+
+                    </label>
+
+                    <div class="flex gap-2">
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#829DBB] text-[#20252C] font-semibold hover:bg-[#91AAC5] transition-colors">
+                            Editar
+                        </button>
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#77575B] text-[#E8EDF3] hover:bg-[#89676B] transition-colors">
+                            Excluir
+                        </button>
+
+                    </div>
+
+                </li>
+
+                <!-- Tarefa 2 -->
+                <li
+                    class="bg-[#323B46] rounded-xl shadow-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <label class="flex items-start gap-3 sm:flex-1 min-w-0">
+
+                        <input type="checkbox" class="mt-1 w-5 h-5 shrink-0 accent-[#829DBB]">
+
+                        <span class="min-w-0">
+                            <span class="block font-medium text-[#E8EDF3]">
+                                Estudar para a prova de Matemática
+                            </span>
+
+                            <span class="text-sm text-[#AAB6C4]">
+                                22/10/2026
+                            </span>
+                        </span>
+
+                    </label>
+
+                    <div class="flex gap-2">
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#829DBB] text-[#20252C] font-semibold hover:bg-[#91AAC5] transition-colors">
+                            Editar
+                        </button>
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#77575B] text-[#E8EDF3] hover:bg-[#89676B] transition-colors">
+                            Excluir
+                        </button>
+
+                    </div>
+
+                </li>
+
+                <!-- Tarefa 3 -->
+                <li
+                    class="bg-[#323B46] rounded-xl shadow-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <label class="flex items-start gap-3 sm:flex-1 min-w-0">
+
+                        <input type="checkbox" checked class="mt-1 w-5 h-5 shrink-0 accent-[#829DBB]">
+
+                        <span class="min-w-0">
+                            <span class="block font-medium text-[#AAB6C4] line-through">
+                                Entregar projeto no GitHub
+                            </span>
+
+                            <span class="text-sm text-[#AAB6C4]">
+                                08/10/2026
+                            </span>
+                        </span>
+
+                    </label>
+
+                    <div class="flex gap-2">
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#829DBB] text-[#20252C] font-semibold hover:bg-[#91AAC5] transition-colors">
+                            Editar
+                        </button>
+
+                        <button type="button"
+                            class="flex-1 sm:flex-none px-4 py-3 rounded-lg bg-[#77575B] text-[#E8EDF3] hover:bg-[#89676B] transition-colors">
+                            Excluir
+                        </button>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+            <p class="mt-4 text-sm text-[#AAB6C4]">
+                2 tarefas pendentes
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
